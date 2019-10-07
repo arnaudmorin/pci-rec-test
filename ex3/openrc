@@ -1,0 +1,9 @@
+export OS_AUTH_URL=https://auth.cloud.ovh.net/v3
+export OS_IDENTITY_API_VERSION=3
+export OS_USER_DOMAIN_NAME="Default"
+export OS_PROJECT_DOMAIN_NAME="Default"
+export OS_TENANT_ID=fc00ee5431d4497681f2039f4e649dca
+export OS_TENANT_NAME="3245829148481055"
+export OS_USERNAME="REPLACE_ME"
+export OS_PASSWORD="REPLACE_ME"
+export OS_REGION_NAME="GRA7"
