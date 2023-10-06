@@ -1,6 +1,10 @@
 # Intro
 
-blabla
+We created this set of exercises to give you the opportunity to express yourself technically. Do as much as you can in
+the time you have. Feel free to ask us questions, if any. No worries if you can't make it all by lack of time or
+understanding of what we're asking. We'll defrief it with you during our next call.
+
+**Have fun!**
 
 ## Fork
 
@@ -12,8 +16,8 @@ Here is the output of a python application:
 
 ```bash
 $ python run.py 'Hello buddies'
- _   _        _  _          _                 _      _  _            
-| | | |  ___ | || |  ___   | |__   _   _   __| |  __| |(_)  ___  ___ 
+ _   _        _  _          _                 _      _  _
+| | | |  ___ | || |  ___   | |__   _   _   __| |  __| |(_)  ___  ___
 | |_| | / _ \| || | / _ \  | '_ \ | | | | / _` | / _` || | / _ \/ __|
 |  _  ||  __/| || || (_) | | |_) || |_| || (_| || (_| || ||  __/\__ \
 |_| |_| \___||_||_| \___/  |_.__/  \__,_| \__,_| \__,_||_| \___||___/
@@ -42,28 +46,28 @@ Bonus, on that instance, make sure a web server (`nginx`) is running.
 
 Push your `main.tf` file in ex3 folder.
 
-
 # Ex. 4 - git
 
 In this repo, there are two branches:
- * stein
- * queens
+
+- stein
+- queens
 
 Stein contains the following commits:
 
- * 1ff2641 (stein) G
- * cf24853 F
- * 3fcdfa0 E
- * cb8c71a D
- * 849ef26 C
- * 372c155 B
- * edc8ed7 A
+- 1ff2641 (stein) G
+- cf24853 F
+- 3fcdfa0 E
+- cb8c71a D
+- 849ef26 C
+- 372c155 B
+- edc8ed7 A
 
 Queens contains the following commits:
 
- * 2624c16 (queens) F
- * 5e3521b B
- * edc8ed7 A
+- 2624c16 (queens) F
+- 5e3521b B
+- edc8ed7 A
 
 So the common ancestor is A (same commit ID).
 
@@ -74,8 +78,9 @@ F has also been cherry-picked but with conflicts (solved, of course).
 ## Exercice
 
 You will need to create two branches:
- - merged
- - rebased
+
+- merged
+- rebased
 
 ### Merged
 
@@ -86,6 +91,7 @@ git checkout -b merged origin/queens
 ```
 
 Then merge the stein branch into your branch
+
 ```bash
 git merge origin/stein
 ```
@@ -94,10 +100,10 @@ You will have a conflict to solved.
 
 Solve it, then push your `merged` branch to your repo.
 
-
 ### Rebased
 
 Now create the rebased branch:
+
 ```bash
 git checkout -b rebased origin/queens
 ```
