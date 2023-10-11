@@ -28,9 +28,9 @@ Can you write the run.py application and put it in the ex1 folder of the repo?
 
 # Ex. 2 - docker
 
-In ex2 folder, you will find a `plik` binary (taken from https://plik.ovh).
+In ex2 folder, you will find a `app` binary.
 
-Can you build very lighweight docker image that contains ONLY `plik` binary, and that execute `plik` by default?
+Can you build very lighweight docker image that contains ONLY `app` binary, and that execute `app` by default?
 
 Push your Dockerfile in the ex2 folder.
 
