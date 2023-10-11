@@ -12,10 +12,52 @@ Fork this repo to your own github repo
 
 # Ex. 1 - python
 
-Here is the output of a python application:
+This exercise will be split into multiple smaller ones. For each one
+you can create files named `a.py`, `b.py` and `c.py`. You maybe resuse the same
+environment for all sub-exercises
+
+Guidelines:
+- Use python version python3.7+.
+- Unless specified otherwise you can only use builtin modules.
+
+### python - A
+
+Write a script that prints out whatever text input is passed as argument
+
+Example:
+
+```
+$ python a.py ping ping ping
+ping ping ping
+```
+
+### python - B
+
+Write a script take takes one argument (-t/--target) which can only
+accept the following values `titi`, `toto`, `tata`. When called with a valid
+target, the script should print out the target text to stdout (`titi`, `toto` or `tata`).
+When an invalid target is provided an error message should be printed to stderr
+
+Example:
+
+```
+$ python b.py --target titi
+titi
+
+$ python b.py -t tutu
+usage: b.py [-h] [-t {titi,toto,tata}]
+b.py: error: argument -t/--target: invalid choice: 'tutu' (choose from 'titi', 'toto', 'tata')
+```
+
+### python - C
+
+Write a script that creates ascii art equivalent of text passed as argument.
+For this exercise you may use a 3rd party module.
+
+Example:
 
 ```bash
-$ python run.py 'Hello buddies'
+$ python c.py 'Hello buddies'
  _   _        _  _          _                 _      _  _
 | | | |  ___ | || |  ___   | |__   _   _   __| |  __| |(_)  ___  ___
 | |_| | / _ \| || | / _ \  | '_ \ | | | | / _` | / _` || | / _ \/ __|
@@ -23,8 +65,6 @@ $ python run.py 'Hello buddies'
 |_| |_| \___||_||_| \___/  |_.__/  \__,_| \__,_| \__,_||_| \___||___/
 
 ```
-
-Can you write the run.py application and put it in the ex1 folder of the repo?
 
 # Ex. 2 - docker
 
