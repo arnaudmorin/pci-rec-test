@@ -10,9 +10,10 @@ import sys
 # Supporting functions
 # -------------------------------------------------------------------------------
 
+
 def cre_opt_parser():
 
-  allowed_choices = [ 'titi' ,'toto' ,'tata' ]
+  allowed_choices = ['titi', 'toto', 'tata']
 
   parser = argparse.ArgumentParser(
       formatter_class=argparse.ArgumentDefaultsHelpFormatter)
@@ -27,6 +28,8 @@ def cre_opt_parser():
       required=True)
 
   return parser
+
+
 # -------------------------------------------------------------------------------
 # Main program
 # -------------------------------------------------------------------------------
@@ -35,4 +38,4 @@ if __name__ == '__main__':
   parser = cre_opt_parser()
   args, opts = parser.parse_known_args()
 
-  print ( args.target )
+  print(args.target)
