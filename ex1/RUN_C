@@ -1,0 +1,5 @@
+#!/bin/sh
+
+WORKSPACE=$(readlink -f $(dirname $0))
+all_args="$*"
+docker run --rm -it -v "${WORKSPACE}:/workspace" python:3.10.12-alpine /bin/sh -c "python3 -m pip install -r /workspace/requirements.txt 1>/dev/null 2>&1; python3 /workspace/c.py ${all_args}"

@@ -2,4 +2,4 @@
 
 
 WORKSPACE=$(readlink -f $(dirname $0))
-docker run --rm -it -v "${WORKSPACE}:/workspace" python:3.7.14-alpine python3 /workspace/a.py foo bar baz
+docker run --rm -it -v "${WORKSPACE}:/workspace" python:3.7.14-alpine python3 /workspace/a.py $@
