@@ -2,7 +2,7 @@
 
 There is no need to extract dependencies of app as is static binary. 
 
-Neverthles the Dockerfile is generic and can handle situation once app will have dependencies too
+Neverthles the Dockerfile is generic and can handle situation when app will become dunamie (and will have dependencies too).
 
 ## Build phase
 
@@ -12,7 +12,7 @@ Please execute BUILDME script
 ./BUILDME
 `
 
-## RUNTIME
+## Runtime phase
 
 Please execute RUNME script
 
