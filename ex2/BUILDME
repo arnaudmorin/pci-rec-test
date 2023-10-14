@@ -1,0 +1,10 @@
+#!/bin/sh
+version="0.0.1-1"
+
+WORKSPACE=$(readlink -f $(dirname $0))
+
+docker rmi ex2:latest
+docker rmi "ex2:${version}"
+
+docker build --progress=plain --no-cache -t ex2:"${version}" -t ex2:latest .
+#docker build --progress=plain -t ex2:"${version}" -t ex2:latest .
