@@ -17,7 +17,7 @@ The `merge` branch will combine commits in the following maner:
     F (cherry picked from commit cf24853205d3f398c24a95aadc8fda539a45404c) 
 ```
 
-while the rebase branch will move the changes as follows:
+while the `rebase` branch will move the changes as follows:
 
 ```
     Initial release 
