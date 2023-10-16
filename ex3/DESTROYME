@@ -5,6 +5,4 @@ WORKSPACE=$(readlink -f $(dirname $0))
 if [ -r "${WORKSPACE}"/secrets/openrc ] ; then
   . "${WORKSPACE}"/secrets/openrc 1>/dev/null 2>&1 
 fi
-
-terraform plan "${WORKSPACE}"
-terraform apply "${WORKSPACE}"
+terraform destroy "${WORKSPACE}"
