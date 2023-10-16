@@ -1,0 +1,21 @@
+--- 
+- name: NGINXNODE | Setup Server
+  hosts: all
+  become: true
+
+  tasks: 
+    - name: NGINXNODE | Add epel-release repo
+      yum:
+        name: epel-release
+        state: present
+
+    - name: NGINXNODE | Install Package
+      yum:
+        name: nginx
+        state: latest
+
+    - name: NGINXNODE | Start Service
+      service: 
+        name: nginx
+        state: started
+        enabled: yes  

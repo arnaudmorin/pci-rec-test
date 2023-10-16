@@ -46,7 +46,9 @@ variable "name" {
   description = "Specif prefix for resources (e.g. key, router)"
 }
 
-variable "generate_ssh_key" {
-  default     = "true"
-  description = "If set to `true`, new SSH key pair will be created"
+
+variable "ssh_user_name" {
+  default     = "centos"
+  type        = string
+  description = "Specify user"
 }

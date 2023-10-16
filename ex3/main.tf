@@ -84,4 +84,41 @@ resource "local_file" "private_key_pem" {
   depends_on = [openstack_compute_keypair_v2.this_provided]
   content    = openstack_compute_keypair_v2.this_provided.private_key
   filename   = local.private_key_filename
+  file_permission = 0700
+  directory_permission = 0700
 }
+
+#------------------------------------------------------------------------------
+# Nginx part
+#------------------------------------------------------------------------------
+
+resource "null_resource" "provision" {
+
+  triggers = {
+    always_run = timestamp()
+  }
+
+  depends_on = [ openstack_compute_instance_v2.nginxnode ]
+
+  connection {
+    agent 	    = "false"
+    host        = openstack_networking_floatingip_v2.nginxnode.address
+    user        = "root"
+    private_key = file(local.private_key_filename)
+  }
+
+  # Provision enginx
+
+    provisioner "local-exec" {
+      command = "ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -u $USER -i '${openstack_networking_floatingip_v2.nginxnode.address},' --private-key $PRIVKEY $PLAYBOOK"
+      environment = {
+        PRIVKEY       = local.private_key_filename
+        PLAYBOOK      = "Ansible/nginx.yaml"
+        USER          = var.ssh_user_name
+      }
+
+    }
+
+}
+
+

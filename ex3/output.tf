@@ -1,5 +1,4 @@
-#output "private_key" {
-#  value     = tls_private_key.example.private_key_pem
-#  sensitive = true
-#}
+output "command" {
+  value     = "Try: curl http://${openstack_networking_floatingip_v2.nginxnode.address}"
+}
 
