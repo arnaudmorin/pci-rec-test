@@ -101,6 +101,7 @@ resource "null_resource" "provision" {
   depends_on = [ openstack_compute_instance_v2.nginxnode ]
 
   connection {
+    timeout     = "5m"
     agent 	    = "false"
     host        = openstack_networking_floatingip_v2.nginxnode.address
     user        = "root"
