@@ -1,0 +1,5 @@
+#!/bin/sh
+
+WORKSPACE=$(readlink -f $(dirname $0))
+. "${WORKSPACE}"/openrc
+. "${WORKSPACE}"/secrets/openrc
